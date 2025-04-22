@@ -1,0 +1,59 @@
+.App {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left-panel {
+    width: 30%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .right-panel {
+    width: 65%;
+    padding: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    cursor: pointer;
+    padding: 5px;
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  li:hover {
+    background-color: #ddd;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

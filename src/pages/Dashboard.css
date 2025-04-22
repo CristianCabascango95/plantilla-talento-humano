@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #2b78c5;
+    --accent-color: #3498db;
+    --light-bg: #f5f7fa;
+    --text-color: #2d3436;
+    --card-bg: #ffffff;
+    --hover-bg: #ecf0f1;
+    --border-radius: 12px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+  }
+  
+  .dashboard {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 280px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .sidebar li {
+    padding: 12px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .sidebar li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar li.active {
+    background-color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 30px 40px;
+    overflow-y: auto;
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .activity-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+    border-left: 6px solid var(--accent-color);
+  }
+  
+  .activity-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+  }
+
+  .top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-color: #f2f2f2;
+  }
+  
+  .repositorio-btn {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .repositorio-btn-sidebar {
+    background-color: #463131;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 1px 0;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+  }

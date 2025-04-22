@@ -1,0 +1,42 @@
+.repositorio-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .upload-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .archivo-lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .archivo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .archivo-item a {
+    color: #007bff;
+    text-decoration: none;
+    flex: 1;
+  }
+  
+  .archivo-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
