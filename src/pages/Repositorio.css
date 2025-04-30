@@ -1,42 +1,105 @@
 .repositorio-container {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .upload-form {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .archivo-lista {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .archivo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 5px;
-    margin-bottom: 0.8rem;
-  }
-  
-  .archivo-item a {
-    color: #007bff;
-    text-decoration: none;
-    flex: 1;
-  }
-  
-  .archivo-item button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.mensaje {
+  text-align: center;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.upload-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="file"] {
+  font-size: 14px;
+  padding: 6px;
+  flex-grow: 1;
+  min-width: 250px;
+}
+
+.subir-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.subir-btn:hover {
+  background-color: #0056b3;
+}
+
+.archivo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  align-items: start;
+}
+
+.archivo-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+}
+
+.archivo-card h4 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.archivo-card p {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.archivo-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ver-btn,
+.eliminar-btn {
+  padding: 5px 4px;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.ver-btn {
+  background-color: #007bff;
+}
+
+.eliminar-btn {
+  background-color: #dc3545;
+}

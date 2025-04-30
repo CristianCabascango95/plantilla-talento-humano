@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
-import fondo from '../assets/PREFECTURA-DE-COTOPAXI.png';
+//import fondo from '../assets/PREFECTURA-DE-COTOPAXI.png';
 
 const Dashboard = () => {
   const [portfolios, setPortfolios] = useState([]);
@@ -46,7 +46,8 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      
+      <div className="background-image" />
+
       <aside className="sidebar">
         <img
           src="https://cotopaxi.gob.ec/test.cotopaxi.gob.ec/wp-content/uploads/2024/09/Captura-de-pantalla-2024-09-14-a-las-13.59.13.png"
@@ -96,3 +97,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+

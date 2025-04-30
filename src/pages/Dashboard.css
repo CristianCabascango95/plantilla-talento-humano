@@ -129,3 +129,16 @@
     width: 100%;
     text-align: left;
   }
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/PREFECTURA-DE-COTOPAXI.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.06; /* Ajusta este valor si quieres que se vea más o menos */
+    z-index: -1;
+    pointer-events: none; /* Para que no interfiera con clics */
+  }

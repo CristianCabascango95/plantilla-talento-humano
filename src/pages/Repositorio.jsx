@@ -8,7 +8,7 @@ const Repositorio = () => {
 
   const fetchArchivos = () => {
     axios.get('http://localhost:5000/api/repositorio')
-      .then(res => setArchivos(res.data))
+      .then(res => setArchivos(res.data.reverse())) // mostrar primero los más recientes
       .catch(err => console.error('Error al cargar archivos:', err));
   };
 
@@ -36,20 +36,24 @@ const Repositorio = () => {
   return (
     <div className="repositorio-container">
       <h2>Repositorio de Documentos</h2>
+
+      <div className="archivo-grid">
+        {archivos.map((file, idx) => (
+          <div key={idx} className="archivo-card">
+            <h4>{file.name}</h4>
+            <p>Subido: {new Date(file.date).toLocaleString()}</p>
+            <div className="archivo-card-actions">
+              <a href={file.url} target="_blank" rel="noopener noreferrer" className="ver-btn">Ver</a>
+              <button onClick={() => handleDelete(file.name)} className="eliminar-btn">Eliminar</button>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <form onSubmit={handleUpload} className="upload-form">
         <input type="file" accept="application/pdf" onChange={e => setArchivo(e.target.files[0])} />
-        <button type="submit">Subir PDF</button>
+        <button type="submit" className="subir-btn">Subir PDF</button>
       </form>
-
-      <ul className="archivo-lista">
-        {archivos.map((file, idx) => (
-          <li key={idx} className="archivo-item">
-            <a href={file.url} target="_blank" rel="noopener noreferrer">{file.name}</a>
-            <span>{new Date(file.date).toLocaleString()}</span>
-            <button onClick={() => handleDelete(file.name)}>Eliminar</button>
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
